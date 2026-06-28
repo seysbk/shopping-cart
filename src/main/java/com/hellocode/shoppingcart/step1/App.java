@@ -9,9 +9,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 
 /**
  * JavaFX App
@@ -24,7 +22,11 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        URL url = new File("<REPLACE WITH PATH>/cart-ui.fxml").toURI().toURL();
+        java.net.URL url = getClass().getResource("cart-ui.fxml");
+        if (url == null) {
+            throw new IOException("Unable to load FXML resource: cart-ui.fxml");
+        }
+
         Parent root = FXMLLoader.load(url);
         stage.setTitle("Shopping Cart App");
         stage.setScene(new Scene(root, Color.TRANSPARENT));
