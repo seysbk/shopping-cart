@@ -1,9 +1,8 @@
+// Loads the home screen FXML that shows the product grid.
 package com.hellocode.shoppingcart.step2.home;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 
@@ -12,13 +11,13 @@ public class HomeView {
     private Parent view;
 
     public HomeView() throws IOException {
-        java.net.URL url = getClass().getResource("home.fxml");
+        URL url = getClass().getResource("/com/hellocode/shoppingcart/step2/home/home-view.fxml");
         if (url == null) {
-            throw new IOException("Unable to load FXML resource: home.fxml");
+            throw new IOException("Unable to load FXML resource: /com/hellocode/shoppingcart/step2/home/home-view.fxml");
         }
+        // Build the home view once and keep the root node for reuse.
         FXMLLoader fxmlLoader = new FXMLLoader(url);
-        Parent root = fxmlLoader.load();
-        this.view = root;
+        this.view = fxmlLoader.load();
     }
 
     public Parent getView(){
