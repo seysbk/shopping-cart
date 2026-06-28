@@ -221,23 +221,16 @@ public void showCartView() {
 ```
 
 ### Step 5: Keep the logic clean
-To make the project more professional, you can later create a dedicated `Cart` class that manages the cart items. That is a better object-oriented design than keeping everything inside one controller.
+We can later create a dedicated `Cart` class that manages the cart items. That is a better object-oriented design than keeping everything inside one controller.
 
 ---
 
 ## 6. Why this project is a good OOP example
-This project is simple, but it already shows important object-oriented ideas:
+It already shows important object-oriented ideas:
 - classes and objects,
 - encapsulation,
 - modeling real-world entities,
 - separating UI and logic,
 - using controllers to manage behavior.
 
-That is exactly what second-year students should understand when learning OOP with Java.
-
 ---
-
-## 7. Short presentation summary
-If you want to explain this project in class, say this:
-
-“This project shows how a JavaFX application can be built using object-oriented programming. The app uses classes to represent the window, the controller logic, the view, and the products. The UI is designed with FXML, while Java classes handle the behavior. This makes the code easier to organize, expand, and maintain.”
